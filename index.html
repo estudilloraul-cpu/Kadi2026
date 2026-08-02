@@ -7,8 +7,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="apple-mobile-web-app-title" content="VW340 Cádiz" />
-<link rel="manifest" href="./manifest.webmanifest?v=8" />
-<link rel="apple-touch-icon" href="./icons/icon-192.png?v=8" />
+<link rel="manifest" href="./manifest.webmanifest?v=9" />
+<link rel="apple-touch-icon" href="./icons/icon-192.png?v=9" />
 <title>VW340 · Cádiz 2026</title>
 <style>
 :root{--bg:#f6f2eb;--surface:#fffdfa;--surface-soft:#f1e8dc;--accent:#b8634c;--accent-2:#d08971;--ink:#1f1e1c;--muted:#79736b;--line:#e7dfd4;--radius:24px;--shadow:0 18px 40px rgba(50,40,30,.08)}
@@ -26,13 +26,15 @@ header{padding:calc(18px + env(safe-area-inset-top)) 2px 14px;display:flex;align
 .note-card,.form-card,.journal-card,.mission{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:0 6px 18px rgba(46,37,28,.035)}.mission{display:flex;gap:13px;align-items:center;margin-bottom:12px}.mission input{width:21px;height:21px;accent-color:var(--accent)}.mission.done{opacity:.56}.mission.done h3{text-decoration:line-through}.mission h3{margin:0 0 4px;font-size:16px}.note,.mission p{margin:0;color:var(--muted);font-size:13px;line-height:1.5}.field{width:100%;border:1px solid var(--line);background:#fff;border-radius:14px;padding:13px 14px;margin:6px 0 12px}.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.photos img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px}.mini-grid{display:grid;gap:12px}.journal-entry{padding:14px;border-radius:18px;background:#fffdf9;border:1px solid var(--line)}.journal-entry h4{margin:0 0 6px;font-size:16px}.journal-entry p{margin:0;color:var(--muted);line-height:1.5;font-size:14px}.tag{display:inline-flex;gap:6px;align-items:center;background:var(--surface-soft);padding:7px 10px;border-radius:999px;font-size:12px;font-weight:750;color:var(--ink);margin:0 8px 8px 0}
 .nav{position:fixed;z-index:20;left:50%;bottom:0;transform:translateX(-50%);width:min(520px,100%);padding:9px 9px calc(9px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(5,1fr);background:rgba(252,250,247,.9);backdrop-filter:blur(24px);border-top:1px solid rgba(0,0,0,.06)}.nav button{border:0;background:none;color:#8a847e;font-size:10px;font-weight:700;padding:4px}.nav b{display:block;font-size:20px;margin-bottom:2px}.nav button.active{color:var(--accent)}
 .modal{position:fixed;inset:0;z-index:40;background:rgba(24,21,19,.54);display:none;align-items:end}.modal.open{display:flex}.sheet{width:min(520px,100%);margin:auto;background:var(--bg);border-radius:30px 30px 0 0;padding:24px 21px calc(30px + env(safe-area-inset-bottom));max-height:88svh;overflow:auto}.sheet h2{font-size:30px;letter-spacing:-.035em;margin:12px 0}.close{border:0;background:var(--surface-soft);width:38px;height:38px;border-radius:50%;font-size:20px;float:right}.pill-kicker{color:var(--accent);font-size:11px;font-weight:900;letter-spacing:.11em;text-transform:uppercase}.pill-lead{font-size:20px;line-height:1.3;font-weight:750;margin:0 0 16px}.pill-story{font-size:16px;line-height:1.7;color:#45413d}.pill-mission{margin-top:20px;background:var(--surface);border:1px solid var(--line);padding:16px;border-radius:18px}.pill-mission b{display:block;color:var(--accent);margin-bottom:5px}.settings-row{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}
+
+.day-curiosities{display:grid;gap:12px}.curiosity-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:0 6px 18px rgba(46,37,28,.035)}.curiosity-card small{display:block;color:var(--accent);font-size:10px;letter-spacing:.1em;font-weight:900;text-transform:uppercase;margin-bottom:6px}.curiosity-card h3{margin:0 0 7px;font-size:18px;letter-spacing:-.02em}.curiosity-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.55}.planning-nav{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.planning-nav button{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:16px;padding:13px 12px;font-weight:800}.planning-nav button:disabled{opacity:.38}.planning-nav .next{background:var(--accent);color:#fff;border-color:var(--accent)}
 .placeholder-msg{padding:14px 16px;border-radius:18px;background:#fbf7ef;border:1px dashed #d3c3ac;color:#655b50;font-size:13px;line-height:1.5;margin-top:12px}
 </style>
 </head>
 <body>
 <div class="app">
   <section id="cover" class="screen cover active" onclick="enterApp()">
-    <img class="cover-photo" src="./assets/cover.jpg?v=8" alt="Frida, Gretas y Maria en la playa">
+    <img class="cover-photo" src="./assets/cover.jpg?v=9" alt="Frida, Gretas y Maria en la playa">
     <div class="cover-content">
       <div class="brand"><span>VW</span><span>340</span></div>
       <div class="cover-copy">
@@ -49,7 +51,7 @@ header{padding:calc(18px + env(safe-area-inset-top)) 2px 14px;display:flex;align
   <section id="inicio" class="screen">
     <header><div><h1>Cádiz</h1><p>Mi Cádiz desde el alma</p></div><div class="avatar">VW</div></header>
     <div class="hero">
-      <img id="heroPhoto" src="./assets/cover.jpg?v=8" alt="Portada">
+      <img id="heroPhoto" src="./assets/cover.jpg?v=9" alt="Portada">
       <div class="hero-copy"><small id="heroDate">DÍA 1 · LUNES 3</small><h2 id="heroTitle">Camposoto y cena en Soleá</h2><span class="chip" id="heroChip">🌅 Tarde de playa y regreso a casa</span></div>
     </div>
     <div class="section-title"><h2>Píldoras de Cádiz</h2><span>Historias para abrir el viaje</span></div>
@@ -59,12 +61,15 @@ header{padding:calc(18px + env(safe-area-inset-top)) 2px 14px;display:flex;align
     <div class="progress"><div class="progress-top"><b>El viaje</b><span id="progressText">1 de 5 días</span></div><div class="bar"><i id="progressBar"></i></div></div>
   </section>
 
-  <section id="ruta" class="screen">
-    <header><div><h1>Ruta</h1><p>Plan del día desde Soleá</p></div><button class="btn secondary" onclick="openMaps(currentDay.map)">Abrir Maps</button></header>
-    <div class="hero" style="min-height:220px"><img id="routePhoto" src="./assets/cover.jpg?v=8" alt="Ruta"><div class="hero-copy"><small id="routeDate">DÍA 1 · LUNES 3</small><h2 id="routeTitle">Camposoto</h2><span class="chip" id="routeChip">🏖 Playa tranquila por la tarde</span></div></div>
+  <section id="planning" class="screen">
+    <header><div><h1>Planning</h1><p>Plan del día desde Soleá</p></div><button class="btn secondary" onclick="openMaps(currentDay.map)">Abrir Maps</button></header>
+    <div class="hero" style="min-height:220px"><img id="routePhoto" src="./assets/cover.jpg?v=9" alt="Ruta"><div class="hero-copy"><small id="routeDate">DÍA 1 · LUNES 3</small><h2 id="routeTitle">Camposoto</h2><span class="chip" id="routeChip">🏖 Playa tranquila por la tarde</span></div></div>
     <div class="timeline" id="timeline"></div>
     <div class="section-title" style="margin-top:22px"><h2>Salida en imágenes</h2><span>Fotos reales</span></div>
     <div class="photos" id="routeGallery"></div>
+    <div class="section-title"><h2>Píldoras del lugar</h2><span>Pequeñas curiosidades</span></div>
+    <div class="day-curiosities" id="dayCuriosities"></div>
+    <div class="planning-nav"><button id="prevDay" onclick="goDay(-1)">← Día anterior</button><button id="nextDay" class="next" onclick="goDay(1)">Día siguiente →</button></div>
     <div class="placeholder-msg">El jueves queda abierto entre El Palmar o Cortadura. De momento la app usa la foto real de Cortadura que me has pasado.</div>
   </section>
 
@@ -107,7 +112,7 @@ header{padding:calc(18px + env(safe-area-inset-top)) 2px 14px;display:flex;align
 
   <nav class="nav" id="nav" style="display:none">
     <button data-screen="inicio" class="active"><b>⌂</b>Inicio</button>
-    <button data-screen="ruta"><b>⌁</b>Ruta</button>
+    <button data-screen="planning"><b>⌁</b>Planning</button>
     <button data-screen="misiones"><b>✓</b>Misiones</button>
     <button data-screen="bitacora"><b>▤</b>Bitácora</button>
     <button data-screen="mas"><b>•••</b>Más</button>
@@ -117,11 +122,37 @@ header{padding:calc(18px + env(safe-area-inset-top)) 2px 14px;display:flex;align
 </div>
 <script>
 const days=[
-  {n:1,date:'LUN · 3 AGO',title:'Camposoto y cena en Soleá',hero:'Camposoto',chip:'🌅 Tarde de playa y regreso a casa',map:'Playa de Camposoto San Fernando Cádiz',photo:'./assets/camposoto.jpg?v=8',thumb:'./assets/camposoto.jpg?v=8',gallery:['./assets/camposoto.jpg?v=8'],stops:[['17:30','Salir de Soleá','Toallas, agua y lo justo para una tarde suave.'],['18:00','Playa de Camposoto','Paseo por la pasarela, baño y primera toma de contacto con el Atlántico.'],['20:30','Regreso a Soleá','Ducha, piscina y cena tranquila en casa.']]},
-  {n:2,date:'MAR · 4 AGO',title:'Bolonia',hero:'Bolonia',chip:'🏖 Día grande de playa',map:'Playa de Bolonia Cádiz',photo:'./assets/bolonia.webp?v=8',thumb:'./assets/bolonia.webp?v=8',gallery:['./assets/bolonia.webp?v=8'],stops:[['09:15','Salir de Soleá','Nevera, sombrilla y protección solar.'],['10:30','Playa de Bolonia','Mar, arena, duna y tiempo sin reloj.'],['14:00','Comer allí','Plan sencillo junto al mar.'],['18:30','Volver a Soleá','Piscina y descanso.']]},
-  {n:3,date:'MIÉ · 5 AGO',title:'La Victoria y Cádiz centro',hero:'La Victoria y Cádiz de noche',chip:'☀️ Playa por la mañana · ciudad por la tarde',map:'Playa de la Victoria Cádiz',photo:'./assets/lavictoria.jpg?v=8',thumb:'./assets/lavictoria.jpg?v=8',gallery:['./assets/lavictoria.jpg?v=8','./assets/cadiz-centro.jpg?v=8'],stops:[['10:00','Playa de La Victoria','Mañana de playa urbana, cómoda y fácil.'],['14:00','Vuelta y descanso','Parada breve antes de salir a Cádiz.'],['18:30','Cádiz centro','Paseo de tarde-noche por el casco histórico.'],['21:00','Cena en Cádiz','Helado, paseo y ambiente de verano.']]},
-  {n:4,date:'JUE · 6 AGO',title:'Mercadillo y atardecer',hero:'San Fernando + El Palmar o Cortadura',chip:'🧺 Mañana de mercadillo · tarde abierta',map:'Mercadillo San Fernando Cádiz',photo:'./assets/mercadillo-sanfernando.jpg?v=8',thumb:'./assets/mercadillo-sanfernando.jpg?v=8',gallery:['./assets/mercadillo-sanfernando.jpg?v=8','./assets/cortadura.jpg?v=8'],stops:[['10:00','Mercadillo de San Fernando','Paseo con calma entre puestos.'],['17:30','Elegir plan','El Palmar o Cortadura, según ganas y viento.'],['19:00','Playa y merienda','Tarde larga junto al mar.'],['21:15','Cena','Quedarse a ver caer el sol.']]},
-  {n:5,date:'VIE · 7 AGO',title:'Sobre la marcha',hero:'Último día',chip:'✨ Lo decidimos juntos',map:'Chiclana Cádiz',photo:'./assets/cover.jpg?v=8',thumb:'./assets/cover.jpg?v=8',gallery:['./assets/cover.jpg?v=8'],stops:[['10:00','Elegir juntos','Repetir favorito o descubrir algo nuevo.'],['13:30','Último almuerzo','Sin prisas y con margen.'],['18:00','Foto final','Cerrar el viaje en familia.']]}
+  {n:1,date:'LUN · 3 AGO',title:'Camposoto y cena en Soleá',hero:'Camposoto',chip:'🌅 Tarde de playa y regreso a casa',map:'Playa de Camposoto San Fernando Cádiz',photo:'./assets/camposoto.jpg?v=9',thumb:'./assets/camposoto.jpg?v=9',gallery:['./assets/camposoto.jpg?v=9'],curiosities:[
+    {place:'Camposoto',title:'Una playa dentro de un parque natural',text:'Camposoto forma parte del Parque Natural Bahía de Cádiz y su paisaje mezcla playa atlántica, marismas, caños y dunas.'},
+    {place:'Camposoto',title:'La Punta del Boquerón',text:'Al final del sendero aparece la Punta del Boquerón, declarada Monumento Natural de Andalucía en 2003.'},
+    {place:'Camposoto',title:'Una batería frente al mar',text:'Junto al recorrido sobreviven los restos de la batería de Urrutia, una defensa que tuvo protagonismo durante la Guerra de la Independencia.'}
+  ],stops:[['17:30','Salir de Soleá','Toallas, agua y lo justo para una tarde suave.'],['18:00','Playa de Camposoto','Paseo por la pasarela, baño y primera toma de contacto con el Atlántico.'],['20:30','Regreso a Soleá','Ducha, piscina y cena tranquila en casa.']]},
+  {n:2,date:'MAR · 4 AGO',title:'Bolonia',hero:'Bolonia',chip:'🏖 Día grande de playa',map:'Playa de Bolonia Cádiz',photo:'./assets/bolonia.webp?v=9',thumb:'./assets/bolonia.webp?v=9',gallery:['./assets/bolonia.webp?v=9'],curiosities:[
+    {place:'Bolonia',title:'Una ciudad romana junto a la arena',text:'Baelo Claudia nació frente al Estrecho y aún conserva foro, teatro, templos, termas y parte de su trazado urbano.'},
+    {place:'Bolonia',title:'El garum que viajaba por el Imperio',text:'En sus factorías se salaba pescado y se fabricaba garum, una salsa muy apreciada en el mundo romano.'},
+    {place:'Bolonia',title:'La duna sigue viva',text:'La gran duna de Bolonia es un Monumento Natural y avanza lentamente impulsada por los vientos de levante.'}
+  ],stops:[['09:15','Salir de Soleá','Nevera, sombrilla y protección solar.'],['10:30','Playa de Bolonia','Mar, arena, duna y tiempo sin reloj.'],['14:00','Comer allí','Plan sencillo junto al mar.'],['18:30','Volver a Soleá','Piscina y descanso.']]},
+  {n:3,date:'MIÉ · 5 AGO',title:'La Victoria y Cádiz centro',hero:'La Victoria y Cádiz de noche',chip:'☀️ Playa por la mañana · ciudad por la tarde',map:'Playa de la Victoria Cádiz',photo:'./assets/lavictoria.jpg?v=9',thumb:'./assets/lavictoria.jpg?v=9',gallery:['./assets/lavictoria.jpg?v=9','./assets/cadiz-centro.jpg?v=9'],curiosities:[
+    {place:'La Victoria',title:'Los famosos duros antiguos',text:'En 1904 aparecieron monedas de plata enterradas en la playa; el hallazgo inspiró el tanguillo gaditano “Aquellos duros antiguos”.'},
+    {place:'La Victoria',title:'Una gran playa urbana',text:'La Victoria se extiende entre Santa María del Mar y Cortadura y es una de las playas urbanas más conocidas de Cádiz.'},
+    {place:'La Victoria',title:'El Carranza llegó a inventar algo',text:'En el Trofeo Carranza de 1962 se utilizó una tanda de cinco penaltis para resolver un empate, una fórmula que luego se hizo universal.'},
+    {place:'Cádiz centro',title:'Gadir significa recinto cerrado',text:'El nombre fenicio de Cádiz, Gadir, aludía a un recinto o fortaleza en un enclave comercial entre Mediterráneo y Atlántico.'},
+    {place:'Cádiz centro',title:'La ciudad del comercio con América',text:'Desde 1717 Cádiz fue sede de la Casa de la Contratación y se convirtió en el gran puerto español del comercio americano.'},
+    {place:'Cádiz centro',title:'Torres para mirar barcos',text:'Muchas casas de comerciantes levantaron torres mirador para vigilar la llegada de navíos y mercancías desde el Atlántico.'}
+  ],stops:[['10:00','Playa de La Victoria','Mañana de playa urbana, cómoda y fácil.'],['14:00','Vuelta y descanso','Parada breve antes de salir a Cádiz.'],['18:30','Cádiz centro','Paseo de tarde-noche por el casco histórico.'],['21:00','Cena en Cádiz','Helado, paseo y ambiente de verano.']]},
+  {n:4,date:'JUE · 6 AGO',title:'Mercadillo y atardecer',hero:'San Fernando + El Palmar o Cortadura',chip:'🧺 Mañana de mercadillo · tarde abierta',map:'Mercadillo San Fernando Cádiz',photo:'./assets/mercadillo-sanfernando.jpg?v=9',thumb:'./assets/mercadillo-sanfernando.jpg?v=9',gallery:['./assets/mercadillo-sanfernando.jpg?v=9','./assets/cortadura.jpg?v=9'],curiosities:[
+    {place:'San Fernando',title:'Aquí se marca la hora oficial',text:'El Real Instituto y Observatorio de la Armada, fundado en 1753, custodia la referencia de la hora oficial de España.'},
+    {place:'San Fernando',title:'La ciudad de Camarón',text:'José Monje Cruz, Camarón de la Isla, nació y creció en Las Callejuelas, un barrio ligado a mariscadores, salineros y pescadores.'},
+    {place:'San Fernando',title:'La Isla de la sal',text:'La bahía llegó a contar con más de 160 salinas tradicionales y San Fernando fue durante siglos uno de los grandes centros del negocio salinero.'},
+    {place:'Cortadura',title:'Una playa protegida por un fuerte',text:'Los restos del fuerte de Cortadura recuerdan la línea defensiva levantada para proteger la entrada a Cádiz durante la invasión napoleónica.'},
+    {place:'Cortadura',title:'El Chato dio nombre a la zona',text:'La playa del Chato debe su nombre popular al histórico ventorrillo situado junto a la carretera de entrada a Cádiz.'},
+    {place:'Cortadura',title:'Una lengua entre dos aguas',text:'Cortadura ocupa el estrecho istmo de acceso a Cádiz, con el Atlántico a un lado y la bahía al otro.'}
+  ],stops:[['10:00','Mercadillo de San Fernando','Paseo con calma entre puestos.'],['17:30','Elegir plan','El Palmar o Cortadura, según ganas y viento.'],['19:00','Playa y merienda','Tarde larga junto al mar.'],['21:15','Cena','Quedarse a ver caer el sol.']]},
+  {n:5,date:'VIE · 7 AGO',title:'Sobre la marcha',hero:'Último día',chip:'✨ Lo decidimos juntos',map:'Chiclana Cádiz',photo:'./assets/cover.jpg?v=9',thumb:'./assets/cover.jpg?v=9',gallery:['./assets/cover.jpg?v=9'],curiosities:[
+    {place:'El viaje',title:'El mejor plan puede ser repetir',text:'El último día queda abierto para volver al lugar favorito, descansar o dejar que el viaje decida por vosotros.'},
+    {place:'El viaje',title:'La foto que lo resume todo',text:'Elegid una imagen final que no sea perfecta, sino la que mejor cuente cómo os habéis sentido.'},
+    {place:'El viaje',title:'Guardar una frase',text:'Antes de terminar, que cada persona diga una frase corta sobre lo mejor del viaje y guardadlas en la bitácora.'}
+  ],stops:[['10:00','Elegir juntos','Repetir favorito o descubrir algo nuevo.'],['13:30','Último almuerzo','Sin prisas y con margen.'],['18:00','Foto final','Cerrar el viaje en familia.']]}
 ];
 const pills=[
   {title:'La piel de Cádiz',photo:'La piel de Cádiz',text:'La piedra ostionera convirtió el mar en ciudad.',lead:'Antes de ser muralla o fachada, Cádiz fue mar abierto.',story:'La piedra ostionera parece una roca humilde, pero dentro guarda un archivo entero de conchas, arena y restos marinos. Con ella se levantaron patios, torres, murallas y casas. Cuando la tocas, no parece una piedra cualquiera: parece una pared que todavía recuerda la marea. Mirarla de cerca es entender que Cádiz no se construyó sólo sobre tierra, sino sobre una costa transformada en memoria.',mission:'Buscad tres fachadas donde se distingan conchas. Elegid la más sorprendente y hacedle una foto de cerca.'},
@@ -145,6 +176,8 @@ function render(){
   document.getElementById('dayList').innerHTML=days.map(d=>`<div class="day" onclick="selectDay(${d.n})"><img src="${d.thumb}" alt="${d.title}"><div><small>${d.date}</small><h3>${d.title}</h3></div><div class="chev">›</div></div>`).join('');
   document.getElementById('timeline').innerHTML=currentDay.stops.map(s=>`<div class="stop"><time>${s[0]}</time><h3>${s[1]}</h3><p>${s[2]}</p></div>`).join('');
   document.getElementById('routeGallery').innerHTML=(currentDay.gallery||[]).map(src=>`<img src="${src}" alt="${currentDay.title}">`).join('');
+  document.getElementById('dayCuriosities').innerHTML=(currentDay.curiosities||[]).map(c=>`<article class="curiosity-card"><small>${c.place}</small><h3>${c.title}</h3><p>${c.text}</p></article>`).join('');
+  document.getElementById('prevDay').disabled=currentDay.n===1;document.getElementById('nextDay').disabled=currentDay.n===days.length;
   document.getElementById('missionList').innerHTML=state.missions.map(m=>`<div class="mission ${m.done?'done':''}"><input type="checkbox" ${m.done?'checked':''} onchange="toggleMission(${m.id})"><div style="flex:1"><h3>${m.text}</h3><p>${m.done?'Completada':'Pendiente'}</p></div><button class="close" onclick="deleteMission(${m.id})">×</button></div>`).join('');
   document.getElementById('journalDay').innerHTML=days.map(d=>`<option value="${d.n}" ${d.n===state.selectedDay?'selected':''}>Día ${d.n} · ${d.title}</option>`).join('');
   const j=state.journalByDay[state.selectedDay] || {text:'',song:'',photos:[]};
@@ -154,7 +187,7 @@ function render(){
 }
 function openPill(i){const p=pills[i];document.getElementById('modalContent').innerHTML=`<div class="pill-kicker">Píldora de Cádiz · 0${i+1}</div><h2>${p.title}</h2><p class="pill-lead">${p.lead}</p><p class="pill-story">${p.story}</p><div class="pill-mission"><b>La misión</b>${p.mission}</div>`;document.getElementById('modal').classList.add('open')}
 function closeModal(){document.getElementById('modal').classList.remove('open')}
-function selectDay(n){updateCurrentDay(n);showScreen('ruta')}
+function selectDay(n){updateCurrentDay(n);showScreen('planning')}
 function toggleMission(id){const m=state.missions.find(x=>x.id===id);m.done=!m.done;save();render()}
 function addMission(){const el=document.getElementById('newMission');if(!el.value.trim())return;state.missions.push({id:Date.now(),text:el.value.trim(),done:false});el.value='';save();render()}
 function deleteMission(id){state.missions=state.missions.filter(x=>x.id!==id);save();render()}
@@ -164,8 +197,9 @@ document.getElementById('journalPhotos').addEventListener('change',e=>{const day
 function exportData(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(state,null,2)],{type:'application/json'}));a.download='vw340-cadiz-copia.json';a.click();URL.revokeObjectURL(a.href)}
 function importData(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{state=JSON.parse(r.result);save();render();alert('Copia importada')}catch{alert('Archivo no válido')}};r.readAsText(f)}
 function resetData(){if(confirm('¿Borrar todos los datos guardados?')){localStorage.removeItem('vw340cadizv7');location.reload()}}
+function goDay(delta){const n=Math.max(1,Math.min(days.length,currentDay.n+delta));updateCurrentDay(n);showScreen('planning')}
 function openMaps(q){location.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q)}
-if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js?v=8'); render();
+if('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js?v=9'); render();
 </script>
 </body>
 </html>
