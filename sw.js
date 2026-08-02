@@ -1,13 +1,40 @@
+const CACHE = 'vw340-kdiz-2026-v8';
+const ASSETS = [
+  './',
+  './index.html',
+  './manifest.webmanifest',
+  './assets/cover.jpg',
+  './assets/camposoto.jpg',
+  './assets/bolonia.webp',
+  './assets/lavictoria.jpg',
+  './assets/cadiz-centro.jpg',
+  './assets/mercadillo-sanfernando.jpg',
+  './assets/cortadura.jpg',
+  './icons/icon-192.png',
+  './icons/icon-512.png'
+];
+
 self.addEventListener('install', event => {
   self.skipWaiting();
+  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)));
 });
+
 self.addEventListener('activate', event => {
   event.waitUntil(
-    caches.keys()
-      .then(keys => Promise.all(keys.map(key => caches.delete(key))))
-      .then(() => self.registration.unregister())
-      .then(() => self.clients.matchAll({ type: 'window' }))
-      .then(clients => clients.forEach(client => client.navigate(client.url)))
+    caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE).map(key => caches.delete(key))))
+      .then(() => self.clients.claim())
   );
 });
-self.addEventListener('fetch', () => {});
+
+self.addEventListener('fetch', event => {
+  if (event.request.method !== 'GET') return;
+  event.respondWith(
+    fetch(event.request)
+      .then(response => {
+        const copy = response.clone();
+        caches.open(CACHE).then(cache => cache.put(event.request, copy));
+        return response;
+      })
+      .catch(() => caches.match(event.request).then(cached => cached || caches.match('./index.html')))
+  );
+});
